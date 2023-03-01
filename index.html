@@ -7,56 +7,83 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <title>EricaTallapietra</title>
     <link rel="shortcut icon" href="./imágenes/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <meta name="keywords" content="cv, frontend, front-end, developer, fullstack, html5, css, javascript, sass, bootstrap, seo,">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body id="tema">
+      <div class="modos" id="modos">
+        <i class="fa-regular fa-sun light" onclick="selectMode('light')"></i>
+        <i class="fa-regular fa-moon dark" onclick="selectMode('dark')"></i>
+      </div>
       <header>
+          <nav class="menu">
+            <ul class="nav justify-content-end barra">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sobreMi">Sobre mi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#proyectos">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#footer">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+        
+  
         <div class="encabezado">
-          <div><img src="./imágenes/dev.jpg" alt="ilustracion de mujer trabajando con pc"></div>
+          <div><img src="./imágenes/dev.jpg" alt="ilustracion de mujer trabajando con pc" id="img-titulo"></div>
           <div class="titulo">
             <h1><b>Hola! Me llamo Erica y soy desarrolladora front-end.</b></h1>
-            <button>Descargar CV</button>
+            <button><a download="cvErica" href="./imágenes/curriculum.png" class="btn-descarga">Descargar CV</a></button>
         </div>
       </header> 
       <main>
         <div>
-          <h2>Actualmente trabajo con estas tecnologías</h2>
+          <h2 id="subtitulo">Actualmente trabajo con estas tecnologías</h2>
         </div>
         <!-- carrousel -->
-        <div class="container-fluidcarrusel">
-          <div id="slidesfotos" class="carousel slide">
-              <div class="carousel-indicators barraslides">
+        <div class="container carrusel" > 
+          <div id="slidesfotos" class="carousel slide carousel-dark">
+              <div class="carousel-indicators barraslides" >
                   <button type="button" data-bs-target="#slidesfotos" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#slidesfotos" data-bs-slide-to="1" aria-label="Slide 2"></button>
                   <button type="button" data-bs-target="#slidesfotos" data-bs-slide-to="2" aria-label="Slide 3"></button>
                   <button type="button" data-bs-target="#slidesfotos" data-bs-slide-to="3" aria-label="Slide 4"></button>
                   <button type="button" data-bs-target="#slidesfotos" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  <button type="button" data-bs-target="#slidesfotos" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                  <button type="button" data-bs-target="#slidesfotos" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                  <button type="button" data-bs-target="#slidesfotos" data-bs-slide-to="7" aria-label="Slide 0"></button>
               </div>
               <div class="carousel-inner">
                   <div class="carousel-item active">
-                      <img src="./imágenes/html-icon.png" class="d-block w-100" alt="ícono de html5">
+                      <img src="./imágenes/html.jpg" class="d-block w-100" alt="ícono de html5">
                   </div>
                   <div class="carousel-item">
-                      <img src="./imágenes/css-icon.png" class="d-block w-100" alt="ícono de css">
+                      <img src="./imágenes/css.jpg" class="d-block w-100" alt="ícono de css">
                   </div>
                   <div class="carousel-item">
-                      <img src="./imágenes/bootstrap-icon.png" class="d-block w-100" alt="ícono de bootstrap">
+                      <img src="./imágenes/bootstrap-icon.jpg" class="d-block w-100" alt="ícono de bootstrap">
                   </div>
                   <div class="carousel-item">
-                      <img src="./imágenes/sass-icon.png" class="d-block w-100" alt="ícono de sass">
+                      <img src="./imágenes/sass-icon.jpg" class="d-block w-100" alt="ícono de sass">
                   </div>
                   <div class="carousel-item">
-                      <img src="./imágenes/git-icon.png" class="d-block w-100" alt="ícono de git">
+                      <img src="./imágenes/git-icon.jpg" class="d-block w-100" alt="ícono de git">
                   </div>
                   <div class="carousel-item">
-                    <img src="./imágenes/github-icon.png" class="d-block w-100" alt="ícono de gitHub">
-                    <div class="carousel-item">
-                    <img src="./imágenes/seo-icon.png" class="d-block w-100" alt="ícono de lupa con palabra SEO">
-                </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="./imágenes/javascript-icon.png" class="d-block w-100" alt="ícono de javascript">
-              </div>
+                    <img src="./imágenes/github-icon.jpg" class="d-block w-100" alt="ícono de gitHub">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imágenes/seo-icon.jpg" class="d-block w-100" alt="ícono de lupa con palabra SEO">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imágenes/javascript-icon.jpg" class="d-block w-100" alt="ícono de javascript">
+                  </div>
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#slidesfotos" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -68,56 +95,76 @@
               </button>
           </div>
       </div>
+      <section class="sobreMi" id="sobreMi">
+      <div class="sobre-mi">
+            <div>
+              <h2 id="subtitulo2">Sobre mi</h2>
+              <p>Creo sitios web funcionales y responsivos para pequeñas empresas.
+              Me inicié en el estudio del desarrollo web a finales del año 2022. Descubrí que encajo perfectamente porque puedo usar mi lado creativo para diseñar y mi lado lógico para programar. Estoy en constante aprendizaje, me considero autodidacta y me gusta destacar en lo que hago.
+              Durante el 2023 voy a ampliar mis habilidades. Mi ruta de estudio continúa con </p>
+            </div>
 
-      <h2>A cerca de mi</h2>
-            <p>Creo sitios web funcionales y responsivos para pequeñas empresas.
-            Me inicié en el estudio del desarrollo web a finales del año 2022. Descubrí que encajo perfectamente porque puedo usar mi lado creativo para diseñar y mi lado lógico para programar. Estoy en constante aprendizaje, me considero autodidacta y me gusta destacar en lo que hago.
-           Durante el 2023 voy a ampliar mis habilidades. Mi ruta de estudio continúa con React Js y Programación Backend.</p>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                      Accordion Item #1
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      Accordion Item #2
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Accordion Item #3
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                  </div>
-                </div>
-              </div>
-      <h2>Proyectos</h2>
+            <details>
+              <summary>React Js</summary>
+                <p>Al entrar al mundo del desarrollo web me surgieron ideas para crear aplicaciones así que considero urgente aprender React para poder ejecutarlas.</p>
+              </details>
+            <details>
+              <summary>Programación Backend</summary>
+              <p>Me gustó crear landing pages pero quiero adquirir más habilidades para hacer operar esos sitios. Quiero estudiar React para acceder a la información que ingrese el cliente, agregar un inicio de sesión, un carrito de compras, procesar solicitudes y administrar base de datos.
+            </details>
+            <details>
+              <summary>Diseño UI/UX</summary>
+                <p>Aprovechando mi lado creativo quiero potenciar mi conocimiento para pulir la apariencia externa de las interfaces de usuario.</p>
+            </details>
+      </div>
+    </section>
+
+  <section id="proyectos">
+    <h2 id="subtitulo3">Proyectos</h2>
+    <div class="proyectos">
+      <div class="contenedor-card">
+        <div class="print-maria">
+          <img src="./imágenes/print-maria.jpg" alt="">
+        </div>
+        <div class="descripcion">
+          <div class="descripcion-card">
+            <h3>María Shoes</h3>
+                    <p>Html, Css</p>
+                    <button><a href="https://eritalla.github.io/eritalla-PreEntrega3Tallapietra/" target="_blank" class="btn-descarga">Repositorio</a></button>
+                    
+                    
+          </div>
+        </div>
+      </div>  
+      <div class="contenedor-card">
+        <div class="print-maria">
+          <img src="./imágenes/print-portfolio.png" alt="">
+        </div>
+        <div class="descripcion">
+          <div class="descripcion-card">
+            <h3>Mi portfolio</h3>
+            <p>Html, Css, Javascript</p>
+            <button><a href="https://github.com/eritalla/eritalla-Proyecto-Final---CV---Erica-Tallapietra.git" target="_blank" class="btn-descarga">Repositorio</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
       </main>
-      <footer>
+      <footer class="footer" id="footer">
+        <div><h2 id="subtitulo4">Contacto</h2></div>
+        <div class="botones-cto">
+          <a href="https://www.linkedin.com/in/erica-tallapietra-813762257/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:erica.tallapietra@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://github.com/eritalla" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://wa.me/543515378056?text=Hola,%20Soy%20Erica.%20%C2%BFEn%20qu%C3%A9%20te%20puedo%20ayudar?" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <marquee class="marquesina" id="marquesina"><strong>Gracias por leer, espero su contacto.</strong></marquee>
       </footer>
     
     
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
