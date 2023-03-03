@@ -187,8 +187,25 @@ h3 {
     font-family: Major Mono Display;
     margin-top: 90px;
 }
+
+@media screen and (max-width: 768px) {
+    .sobre-mi {
+        width: 70%;
+    }
+    .contenedor-card {
+        width: 100%;
+    }
+}
+
+
 @media screen and (max-width: 480px) {
     .encabezado {
         flex-direction: column-reverse;
+    }
+    .sobre-mi {
+        width: 100%;
+    }
+    .contenedor-card {
+        width: 100%;
     }
 }
