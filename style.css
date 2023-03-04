@@ -64,15 +64,7 @@ p {
     margin: 40px;
 }
 
-.carrusel {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#slidefotos {
-    width: 20%;
-}
+
 .button {
     color: #6beef7dc;
 }
@@ -179,6 +171,7 @@ h3 {
     flex-wrap: wrap;
     align-items: center;
     gap: 5em;
+    width: 100%;
 }
 
 .marquesina {
