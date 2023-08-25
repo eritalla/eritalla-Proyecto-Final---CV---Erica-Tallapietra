@@ -5,6 +5,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #f4eafc;
+}
 .barra li a {
   color: #be96dd;
 }
@@ -16,6 +20,9 @@
 .encabezado {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .titulo {
   display: flex;
@@ -50,6 +57,11 @@ button {
 .btn-descarga {
   color: white;
 }
+
+.carrusel-tit {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 h2 {
   color: #080659;
   text-shadow: 2px 2px 4px #be96dd;
@@ -69,9 +81,11 @@ p {
 }
 
 .carrusel {
-  width: 70%;
-  margin: 0 auto;
+  width: 100%;
+  padding-left: 80px;
+  padding-right: 80px;
 }
+
 .button {
   color: #6beef7dc;
 }
@@ -102,6 +116,7 @@ p {
   overflow: hidden;
   font-size: 14px;
   width: 42%;
+  height: 400px;
 }
 .print-maria {
   object-fit: cover;
@@ -184,31 +199,48 @@ h3 {
   text-shadow: 2px 2px 4px #be96dd;
   font-family: Major Mono Display;
   margin-top: 90px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 @media screen and (max-width: 768px) {
+  .encabezado {
+    display: block;
+    flex-direction: column-reverse;
+  }
+  .imagentit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  #img-titulo {
+    width: 100%;
+    height: auto;
+  }
   .sobre-mi {
     width: 70%;
   }
   .contenedor-card {
-    width: 100%;
+    width: 50%;
   }
 }
 
 @media screen and (max-width: 480px) {
   .encabezado {
+    display: block;
     flex-direction: column-reverse;
   }
+  .imagentit {
+    display: block;
+  }
+
   .sobre-mi {
     width: 100%;
   }
   .contenedor-card {
     width: 100%;
   }
-}
-
-@media screen and (max-width: 780px) {
-  .titulo {
-    display: block;
+  .contenedor-card {
+    width: 70%;
   }
 }
