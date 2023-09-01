@@ -117,6 +117,7 @@ p {
   font-size: 14px;
   width: 42%;
   height: 400px;
+  border-radius: 10%;
 }
 .print-maria {
   object-fit: cover;
@@ -194,13 +195,17 @@ h3 {
   font-size: 24px;
 }
 
+footer {
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .marquesina {
   color: #080659;
   text-shadow: 2px 2px 4px #be96dd;
   font-family: Major Mono Display;
   margin-top: 90px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media screen and (max-width: 768px) {
