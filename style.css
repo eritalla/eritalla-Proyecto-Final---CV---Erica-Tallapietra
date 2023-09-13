@@ -81,9 +81,10 @@ p {
 }
 
 .carrusel {
-  width: 100%;
-  padding-left: 80px;
-  padding-right: 80px;
+  width: 80%;
+  margin: auto;
+  /* padding-left: 80px;
+  padding-right: 80px; */
 }
 
 .button {
