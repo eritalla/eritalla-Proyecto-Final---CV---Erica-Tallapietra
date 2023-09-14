@@ -83,8 +83,6 @@ p {
 .carrusel {
   width: 80%;
   margin: auto;
-  /* padding-left: 80px;
-  padding-right: 80px; */
 }
 
 .button {
@@ -101,7 +99,10 @@ p {
   justify-content: center;
   align-items: flex-start;
 }
-
+details {
+  padding-left: 80px;
+  padding-right: 80px;
+}
 .proyectos {
   display: flex;
   flex-direction: column;
